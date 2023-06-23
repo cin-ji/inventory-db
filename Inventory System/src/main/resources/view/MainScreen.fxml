@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+<?import javafx.scene.text.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="715.0" prefWidth="1452.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controller.MainScreenController">
+   <children>
+      <VBox alignment="CENTER_LEFT" layoutX="50.0" layoutY="94.0" prefHeight="548.0" prefWidth="666.0">
+         <children>
+            <Label prefHeight="34.0" prefWidth="74.0" text="Parts">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="0.0" prefWidth="576.0" />
+            <TableView fx:id="partTable" prefHeight="457.0" prefWidth="655.0">
+              <columns>
+                <TableColumn fx:id="partIDColumn" prefWidth="125.0" text="Part ID" />
+                <TableColumn fx:id="partNameColumn" prefWidth="125.0" text="Part Name" />
+                  <TableColumn fx:id="partInventoryColumn" prefWidth="125.0" text="Inventory Level" />
+                  <TableColumn fx:id="partPriceColumn" prefWidth="125.0" text="Price/Cost per Unit" />
+              </columns>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="addPartButton" mnemonicParsing="false" onAction="#onAddPartButton" text="Add" />
+                  <Button fx:id="modifyPartButton" mnemonicParsing="false" onAction="#onModifyPartButton" text="Modify" />
+                  <Button fx:id="deletePartButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onDeletePartButton" text="Delete" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <Button fx:id="exitButton" layoutX="1305.0" layoutY="638.0" mnemonicParsing="false" onAction="#onExit" prefHeight="42.0" prefWidth="89.0" text="Exit" />
+      <VBox alignment="CENTER_LEFT" layoutX="737.0" layoutY="94.0" prefHeight="548.0" prefWidth="666.0">
+         <children>
+            <Label prefHeight="34.0" prefWidth="112.0" text="Product">
+               <font>
+                  <Font size="23.0" />
+               </font>
+            </Label>
+            <VBox prefHeight="0.0" prefWidth="576.0" />
+            <TableView fx:id="productTable" prefHeight="457.0" prefWidth="655.0">
+               <columns>
+                  <TableColumn fx:id="productIDColumn" prefWidth="125.0" text="Product ID" />
+                  <TableColumn fx:id="productNameColumn" prefWidth="125.0" text="Product Name" />
+                  <TableColumn fx:id="productInventoryColumn" prefWidth="125.0" text="Inventory Level" />
+                  <TableColumn fx:id="productPriceColumn" prefWidth="125.0" text="Price/Cost per Unit" />
+               </columns>
+            </TableView>
+            <HBox prefHeight="100.0" prefWidth="200.0">
+               <children>
+                  <Button fx:id="addProductButton" mnemonicParsing="false" onAction="#onAddProductButton" text="Add" />
+                  <Button fx:id="modifyProductButton" mnemonicParsing="false" onAction="#onModifyProductButton" text="Modify" />
+                  <Button fx:id="deleteProductButton" layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onDeleteProductButton" text="Delete" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+      <TextField fx:id="partLookupField" layoutX="567.0" layoutY="60.0" onAction="#onPartLookup" promptText="Search by Part ID or Number" />
+      <TextField fx:id="productLookupField" layoutX="1254.0" layoutY="60.0" onAction="#onProductLookup" promptText="Search by Product ID or Number" />
+   </children>
+</AnchorPane>
